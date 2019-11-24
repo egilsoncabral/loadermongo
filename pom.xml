@@ -9,16 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tbproject</groupId>
-	<artifactId>challenge</artifactId>
+	<artifactId>loader</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>TB Challenge Vehicles</name>
-	<description>Project to exposes vehicles datas</description>
+	<name>Dataset loader</name>
+	<description>Project to load datas into mongodb</description>
 
-
-	<properties>
-		<java.version>1.8</java.version>
-		<docker.image.prefix>tbproject</docker.image.prefix>
-	</properties>
 
 	<dependencies>
 		<dependency>
@@ -46,60 +41,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<!-- Test -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>1.9.5</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.github.fakemongo</groupId>
-			<artifactId>fongo</artifactId>
-			<version>2.2.0-RC2</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.lordofthejars</groupId>
-			<artifactId>nosqlunit-mongodb</artifactId>
-			<version>0.7.6</version>
-			<scope>test</scope>
-		</dependency>
-		<!--SpringFox dependencies -->
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>2.9.2</version>
-		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.9.2</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>2.10.1</version>
-		</dependency>
-		<!-- Bean Validation API support -->
-		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-		</dependency>
-
-
 
 	</dependencies>
 
