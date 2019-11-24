@@ -28,7 +28,8 @@ These instructions will get you a copy of the project up and running on your loc
                 $ mvn spring-boot:run -Dspring-boot.run.arguments=--input.file.name=$filename,--host.address=$host
         
                 P.S: $filename example: bus.csv, for the host use "locahost" for docker CE or "192.168.99.100" for docker toolbox
-		Example: mvn spring-boot:run -Dspring-boot.run.arguments=--input.file.name=bus.csv,--host.address=192.168.99.100
+		
+		  Example: mvn spring-boot:run -Dspring-boot.run.arguments=--input.file.name=bus.csv,--host.address=192.168.99.100
     
 #### Used Technologies
 
