@@ -1,4 +1,5 @@
 # Loader Mongo Data
+
 This is a personal project, whose purpose is load some datas to give support to the [TB_Challenge](https://github.com/egilsoncabral/tb_challenge) project.
 
 ## Getting Started
@@ -14,61 +15,25 @@ These instructions will get you a copy of the project up and running on your loc
 
 	1. Clone project
 
-		$ git clone https://github.com/egilsoncabral/tb_challenge.git
+		$ https://github.com/egilsoncabral/loadermongo
 		
 	2. Build the project
 
-	    - For build the project, you will need to execute the instructions
-        	
-         	$ mvn clean package
-         	$ docker-compose up
-        	
-        - Now, clone the data loader project, to load the datas on Mongo database:
-        	
-        	$ git clone https://github.com/egilsoncabral/loadermongo.git
-        
-        - Enter in the project folder and execute:	
-        
-            $ mvn clean package
+	    - Enter in the project folder and execute:	
             
-        - Go to /target folder, take the .jar file generated and put it in a folder of your own.
+            - Take the dataset file in (https://data.gov.ie/dataset/dublin-bus-gps-sample-data-from-dublin-city-council-insight-project), download one extract, and from that extract, use 1 example CSV as input. Put it in the same folder of the project.
+            
+            - Execute:
+                
+                $ mvn springboot:run -Dspring-boot.run.arguments=--input.file.name={$filename},--host.address={host}
         
-        - Take the dataset file in (https://data.gov.ie/dataset/dublin-bus-gps-sample-data-from-dublin-city-council-insight-project), download one extract, and from that extract, use 1 example CSV as input. Put it in the same folder that you put the jar file.
-        
-        - Execute:
-            $ mvn springboot:run -Dspring-boot.run.arguments=--input.file.name={$filename},--host.address={host}
-	
-	    P.S: $filename example: bus.csv, for the host use "locahost" for docker CE or "192.168.99.100" for docker toolbox
-        
-        - Now access the url:
-            > http://192.168.99.100:8080/swagger-ui.html (If you are using docker toolbox)
-            > http://localhost:8080/swagger-ui.html (If you are using docker CE)    
+                P.S: $filename example: bus.csv, for the host use "locahost" for docker CE or "192.168.99.100" for docker toolbox    
     
-### Exposed four endpoints:
-
-```
-/operators
-```
-
-```
-/vehicles
-```
-
-```
-/vehicleAtStop
-```
-
-```
-/vehicleTrace
-```
-
 #### Used Technologies
 
 * Java 8
 * Lombok for data models
 * SpringBoot 
-* Docker
-* Swagger
 * MongoDB
 
 ## Versioning
